@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: meu-site-service
+spec:
+  selector:
+    app: meu-site  # Associa o serviço aos pods do deployment
+  ports:
+    - protocol: TCP
+      port: 80  # Porta exposta pelo serviço
+      targetPort: 80  # Porta do container que o serviço acessa
+  type: LoadBalancer  # Exposição do serviço (com um LoadBalancer, o Kubernetes cria um IP público)
