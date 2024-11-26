@@ -9,4 +9,4 @@ spec:
     - protocol: TCP
       port: 80  # Porta exposta pelo serviço
       targetPort: 80  # Porta do container que o serviço acessa
-  type: LoadBalancer  # Exposição do serviço (com um LoadBalancer, o Kubernetes cria um IP público)
+  type: NodePort  # Exposição do serviço (com um LoadBalancer, o Kubernetes cria um IP público)
